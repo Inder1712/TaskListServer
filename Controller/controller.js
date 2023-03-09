@@ -6,7 +6,7 @@ export const AddTasks=async(req,res)=>{
       await  taskModel.create(req.body)
         res.json("Task created successfully")
     } catch (error) {
-        console.log("Error in AddTasks");
+        console.log(error);
         res.json("Error in AddTasks")
         
     }
@@ -17,7 +17,7 @@ export const GetTasks=async(req,res)=>{
        
        res.json(tasks)
     } catch (error) {
-        console.log("Error in GetTasks");
+        console.log(error);
         res.json("Error in GetTasks")
     }
 }

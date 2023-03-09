@@ -7,7 +7,7 @@ export const AddTasks=async(req,res)=>{
         res.json("Task created successfully")
     } catch (error) {
         console.log(error);
-        res.json("Error in AddTasks")
+        res.json(error)
         
     }
 }

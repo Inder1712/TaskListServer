@@ -18,7 +18,7 @@ export const GetTasks=async(req,res)=>{
        res.json(tasks)
     } catch (error) {
         console.log(error);
-        res.json("Error in GetTasks")
+        res.json(error)
     }
 }
 

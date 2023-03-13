@@ -36,6 +36,19 @@ export const updateTask = async (req, res) => {
     }
 }
 
+export const completeTask = async (req, res) => {
+    try {
+        const task= await taskModel.findByIdAndUpdate(req.body._id);
+        task.complete=!task.complete
+        await task.save()
+    
+        res.json("Task Updated successfully")
+    } catch (error) {
+        console.log("Error in deleteTask", error);
+        res.json("Error in deleteTask");
+    }
+}
+
 export const deleteTask = async (req, res) => {
     try {
         const deletedTask = await taskModel.findByIdAndDelete(req.body._id);

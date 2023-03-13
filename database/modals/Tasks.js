@@ -13,6 +13,9 @@ const schema=mongoose.Schema({
     star:{
         type:Boolean
     },
+    complete:{
+        type:Boolean
+    },
     listId:{
         type:String
     },
